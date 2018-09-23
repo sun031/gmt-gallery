@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head tag -->
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  
+  <title>velocity depth slice - gmt-gallery</title>
+
+  <!--Favicon-->
+  <link rel="icon" href="favicon/favicon.ico">
+
+  <!--Description-->
+  
+      <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778#!/">
+  
+
+  <!--Author-->
+  
+      <meta name="author" content="Weijia Sun">
+  
+
+  <!-- Pure CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+
+  <body>
+  	<div class="container-fluid navbar-container m-sm-5">
+      <!-- Header -->
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+  <a class="navbar-brand ml-2" href="/">gmt-gallery</a>
+  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto my-auto">
+      
+    </ul>
+    <hr class="hidden-md-up" />
+  </div>
+</nav>
+
+
+  		<div class="row">
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/examples/ex001/hello.jpg" alt="velocity depth slice">
+</div>
+<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+  <h1>velocity depth slice</h1>
+</div>
+<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="keyword">import</span> pyGmt</span><br><span class="line"><span class="keyword">import</span> subprocess</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">Plot along E-W</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line">R = <span class="string">"70/110/10/55"</span></span><br><span class="line">vfile = <span class="string">"tibet_vp.xyzv"</span></span><br><span class="line">figdir = <span class="string">"figs"</span></span><br><span class="line">figsize = <span class="string">"12c"</span></span><br><span class="line"></span><br><span class="line">r = R.split(<span class="string">"/"</span>)</span><br><span class="line">r0 = float(r[<span class="number">0</span>])</span><br><span class="line">r1 = float(r[<span class="number">1</span>])</span><br><span class="line">r2 = float(r[<span class="number">2</span>])</span><br><span class="line">r3 = float(r[<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line">J = <span class="string">"B%f/%f/%f/%f/%s"</span> % (<span class="number">0.5</span>*(r0+r1), <span class="number">0.5</span>*(r2+r3), r2, r3, figsize)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> dep <span class="keyword">in</span> range(<span class="number">50</span>, <span class="number">201</span>, <span class="number">25</span>):</span><br><span class="line"></span><br><span class="line">    datf = <span class="string">"figs/dv%s_p.xyv"</span> % str(dep).zfill(<span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    psfile = <span class="string">"figs/dv%s_p.ps"</span> % str(dep).zfill(<span class="number">3</span>)</span><br><span class="line">    <span class="keyword">print</span> psfile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    gmt = pyGmt.Gmt()</span><br><span class="line"></span><br><span class="line">    gmt.set(<span class="string">"MAP_FRAME_TYPE"</span>, <span class="string">"plain"</span>)</span><br><span class="line">    gmt.set(<span class="string">"FORMAT_GEO_MAP"</span>, <span class="string">"ddd:mm:ssF"</span>)</span><br><span class="line">    <span class="comment"># gmt.set("MAP_DEGREE_SYMBOL", "none")</span></span><br><span class="line"></span><br><span class="line">    gmt.cmd(<span class="string">"pscoast"</span>, <span class="string">"-J%s -R%s -K -Bx10f5 -By10f5 -BWenS -W1/0.5p &gt; %s"</span> % (J, R, psfile))</span><br><span class="line"></span><br><span class="line">    gmt.cmd(<span class="string">"makecpt"</span>, <span class="string">"-Cjet -T7.5/8.5 -I &gt; color.cpt"</span>)</span><br><span class="line"></span><br><span class="line">    cmd = <span class="string">"cat %s | awk '&#123;if($3==%f)&#123;print $1,$2,$4&#125; &#125;' &gt; %s"</span> % (vfile, dep, datf)</span><br><span class="line">    subprocess.call(cmd, shell=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    gmt.cmd(<span class="string">"xyz2grd"</span>, <span class="string">"%s -Gtemp.grd -I0.5/0.5 -R70/110/10/55"</span> % (datf))</span><br><span class="line">    gmt.cmd(<span class="string">"grdsample"</span>, <span class="string">"temp.grd -Gout.grd -I0.1/0.1"</span>)</span><br><span class="line">    gmt.cmd(<span class="string">"grdimage"</span>, <span class="string">"out.grd -J -R%s -K -O -Ccolor.cpt &gt;&gt; %s"</span> % (R, psfile))</span><br><span class="line">    gmt.cmd(<span class="string">"pscoast"</span>, <span class="string">"-J%s -R%s -K -O -W1/0.5p -Bwens &gt;&gt; %s"</span> % (J, R, psfile))</span><br><span class="line"></span><br><span class="line">    gmt.comment(<span class="string">"plot tectoic line"</span>)</span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"../../../moho/gmt/thrust.gmt  -R -J -W1.0p,black -Sf0.5+t+l -O -K &gt;&gt; %s"</span> % (psfile))</span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"../../../moho/gmt/sutures.gmt -R -J -W1.0p,black,- -O -K &gt;&gt; %s"</span> % (psfile))</span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"../../../moho/gmt/normal.gmt -R -J -W1.0p,black,- -O -K &gt;&gt; %s"</span> % (psfile))</span><br><span class="line">    <span class="comment"># gmt.cmd("psxy", "../../moho/gmt/dextral.gmt -R -J -W1.0p,black,- -O -K &gt;&gt; %s" % (psfile))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># label</span></span><br><span class="line">    gmt.shell(<span class="string">"echo 70.7 12 Depth=%.1fkm &gt; text.d"</span> % (dep))</span><br><span class="line">    gmt.cmd(<span class="string">"pstext"</span>, <span class="string">"text.d -J -R -K -O -F+f10p+jBL &gt;&gt; %s"</span> % (psfile))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># gmt.cmd("psxy", "CN-plate-neighbor.dat  -R -J -W3.0p,2/138/210 -Sf0.5+t+l -G2/138/210 -O -K &gt;&gt; %s" % (psfile))</span></span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"../../../moho/CN-block-L1.dat -R -J -W1.0p,gray -O -K &gt;&gt; %s"</span> % (psfile))</span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"../../../moho/CN-block-L2.dat -R -J -W1.0p,gray -K -O &gt;&gt; %s"</span> % (psfile))</span><br><span class="line">    <span class="comment"># gmt.cmd("psxy", "CN-faults.dat -R -J -W0.5p,black,- -K -O &gt;&gt; %s" % (psfile))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># gmt.cmd("psxy", "moho_idw.xyz -J -R -K -O -Ccolor -St0.35c &gt;&gt; %s" % (psfile))</span></span><br><span class="line">    gmt.cmd(<span class="string">"psscale"</span>, <span class="string">"-DjCB+w7c/0.3c+o0/-2.0c+h -Ba0.5f0.1 -By+l'Vp [km/s]' -Ccolor -J -R -K -O &gt;&gt; %s "</span> % (psfile))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># plot station and events</span></span><br><span class="line"></span><br><span class="line">    gmt.cmd(<span class="string">"psxy"</span>, <span class="string">"-J -R -O -T &gt;&gt; %s"</span> % psfile)</span><br><span class="line">    gmt.cmd(<span class="string">"psconvert"</span>, <span class="string">"-A -P -Tj -E720 %s"</span> % psfile)</span><br><span class="line">    gmt.cmd(<span class="string">"psconvert"</span>, <span class="string">"-A -P -Tf %s"</span> % psfile)</span><br><span class="line"></span><br><span class="line">    gmt.execute()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># os._exit(0)</span></span><br></pre></td></tr></table></figure>
+</div>
+
+
+      </div>
+      
+  	</div>
+
+    <!-- After footer scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>
